@@ -1,0 +1,16 @@
+# Configurações do site (Jekyll)
+title: "[Nome do Espaço]"
+description: "[SUBSTITUIR: descrição curta para o Google]"
+lang: pt-BR
+# Se publicar em https://usuario.github.io/espacobrunsfeld, deixe baseurl: "/espacobrunsfeld".
+# Com domínio próprio (ex.: espacobrunsfeld.com.br), use baseurl: ""
+baseurl: ""
+url: ""
+# Faixa amarela de aviso de conteúdo provisório. Mude para false quando o conteúdo real estiver no lugar.
+aviso_modelo: true
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - docs
+  - vendor

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ledger&family=Merriweather:wght@300;400;700&family=Quicksand:wght@500;600&family=Red+Hat+Display:wght@500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo principal</a>
+{% if site.aviso_modelo %}<div class="aviso">Versão de modelo: textos, fotos e logo entre [colchetes] devem ser substituídos pelo conteúdo real.</div>{% endif %}
+<header class="header">
+  <div class="barra">
+    {% include logo.html %}
+    <button class="menu-btn" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('aberto')">&#9776;</button>
+    <nav class="nav"><ul>
+      {%- for item in site.data.nav %}
+      <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="ativo"{% endif %}>{{ item.titulo }}</a></li>
+      {%- endfor %}
+    </ul></nav>
+  </div>
+</header>
+<main id="conteudo">
+{{ content }}
+</main>
+{% assign c = site.data.contato %}
+<footer class="rodape-eb" id="contato">
+  <div class="container">
+    <div>{% include logo.html %}<p>{{ c.chamada }}</p><a class="insta" href="{{ c.instagram }}" aria-label="Instagram">{% include icone.html nome="instagram" %}</a></div>
+    <div><h4>Contato</h4><ul>
+      <li><span class="ic">{% include icone.html nome="whatsapp" %}</span><a href="{{ c.whatsapp_link }}">{{ c.whatsapp }}</a></li>
+      <li><span class="ic">{% include icone.html nome="telefone" %}</span>{{ c.telefone }}</li>
+      <li><span class="ic">{% include icone.html nome="email" %}</span><a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+    </ul></div>
+    <div><h4>Endereço</h4><p>{{ c.endereco | join: "<br>" }}</p></div>
+  </div>
+</footer>
+<footer class="rodape"><div class="container">{{ c.credito }} - Todos os direitos reservados</div></footer>
+<a class="topo" href="#" aria-label="Voltar ao topo">&#9650;</a>
+<a class="whats" href="{{ c.whatsapp_link }}" aria-label="Falar pelo WhatsApp">{% include icone.html nome="whatsapp" %}</a>
+<script>
+addEventListener('scroll',()=>document.querySelector('.header').classList.toggle('rolado',scrollY>40));
+function carrossel(sel){const it=[...document.querySelectorAll(sel)];if(!it.length)return null;let i=0;return d=>{it[i].classList.remove('ativo');i=(i+d+it.length)%it.length;it[i].classList.add('ativo');}}
+const passaHero=carrossel('.hero .slide'),passaEquipe=carrossel('.membro');
+if(passaHero)setInterval(()=>passaHero(1),6000);
+</script>
+</body>
+</html>

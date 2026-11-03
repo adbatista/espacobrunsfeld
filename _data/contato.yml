@@ -1,0 +1,11 @@
+# Dados de contato exibidos no rodapé de todas as páginas
+chamada: "[SUBSTITUIR: frase convidando a entrar em contato pelas redes sociais ou meios de contato.]"
+whatsapp: "[(00) 0 0000-0000]"
+whatsapp_link: "#"        # ex.: https://api.whatsapp.com/send?phone=55DDDNUMERO
+telefone: "[(00) 0000-0000]"
+email: "[email@dominio.com]"
+instagram: "#"            # link do perfil
+endereco:
+  - "[Rua, número - Bairro,]"
+  - "[Cidade - UF, CEP]"
+credito: "[Crédito]"

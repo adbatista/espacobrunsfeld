@@ -1,0 +1,42 @@
+---
+layout: default
+title: O Espaço
+---
+<section class="bloco decor-dir" style="padding-top:60px"><div class="container">
+  <div class="texto"><h1 class="titulo">O Espaço</h1><p>[SUBSTITUIR: texto institucional sobre a experiência, o protocolo de atendimento e as premissas da empresa.]</p></div>
+  <div class="midia"><div class="circulo"><img src="{{ '/assets/img/hero-1.svg' | relative_url }}" alt="[Foto da recepção]"></div></div>
+</div></section>
+{% include onda.html cima="var(--bege)" baixo="#fff" forma=2 %}
+
+<section class="branco"><div class="container mvv">
+  <div class="cartao"><h3>Missão</h3><p>[SUBSTITUIR: missão]</p></div>
+  <div class="cartao"><h3>Visão</h3><p>[SUBSTITUIR: visão]</p></div>
+  <div class="cartao"><h3>Valores</h3><ul><li>[Valor 1]</li><li>[Valor 2]</li><li>[Valor 3]</li><li>[Valor 4]</li></ul></div>
+</div></section>
+{% include onda.html cima="#fff" baixo="var(--bege)" forma=2 %}
+
+<section style="padding:10px 0 60px"><div class="container">
+  <h2 class="titulo">Estrutura da Empresa</h2>
+  <div class="carrossel">
+    <button class="seta esq" aria-label="Anterior">&#8249;</button>
+    <div class="galeria">
+      {%- for f in site.data.estrutura %}<img src="{{ '/assets/img/' | append: f.foto | relative_url }}" alt="{{ f.alt }}">{% endfor %}
+    </div>
+    <button class="seta dir" aria-label="Próximo">&#8250;</button>
+  </div>
+</div></section>
+{% include onda.html cima="var(--bege)" baixo="#fff" forma=2 %}
+
+<section class="branco equipe decor-dir">
+  {%- for m in site.data.equipe %}
+  <div class="container membro{% if forloop.first %} ativo{% endif %}">
+    <div class="circulo"><img src="{{ '/assets/img/' | append: m.foto | relative_url }}" alt="{{ m.nome }}"></div>
+    <div>
+      <div class="topo-eq"><h2 class="titulo">Equipe</h2><div class="setas"><button aria-label="Anterior" onclick="passaEquipe(-1)">&#8249;</button><button aria-label="Próximo" onclick="passaEquipe(1)">&#8250;</button></div></div>
+      <h3>{{ m.nome }}</h3>
+      <ul>{% for linha in m.formacao %}<li>{{ linha }}</li>{% endfor %}</ul>
+      <span class="papel">{{ m.especialidade }}</span>
+    </div>
+  </div>
+  {%- endfor %}
+</section>

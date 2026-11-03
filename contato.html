@@ -1,0 +1,15 @@
+---
+layout: default
+title: Contato
+---
+{% include cabeca-pagina.html titulo="Contato" subtitulo="[SUBSTITUIR: frase de convite]" %}
+<section class="bloco" style="padding-top:20px"><div class="container">
+  <form class="form" onsubmit="event.preventDefault();alert('Formulário de exemplo: conecte a um serviço de envio (ex.: Formspree) ou ao WhatsApp.');">
+    <input placeholder="Nome" required>
+    <input type="email" placeholder="E-mail" required>
+    <input placeholder="Telefone / WhatsApp">
+    <textarea rows="5" placeholder="Mensagem"></textarea>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+  <div class="mapa">[Mapa do Google: colar aqui o &lt;iframe&gt; do endereço]</div>
+</div></section>

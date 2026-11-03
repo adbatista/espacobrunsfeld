@@ -1,0 +1,11 @@
+---
+layout: default
+title: Serviços
+---
+{% include cabeca-pagina.html titulo="Serviços" subtitulo="[SUBSTITUIR: frase de apoio da página de serviços]" %}
+<div class="metade-bege"><div class="container"><div class="cards-foto">
+  {%- for s in site.data.servicos %}
+  <a class="card-foto" href="#"><img src="{{ '/assets/img/' | append: s.foto | relative_url }}" alt="{{ s.nome }}"><span class="rotulo">{{ s.nome }}<i></i></span></a>
+  {%- endfor %}
+</div></div></div>
+<nav class="paginacao" aria-label="Páginas"><a class="ativo" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">&#8250;</a></nav>

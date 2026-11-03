@@ -1,0 +1,159 @@
+/* ===== Cores e fontes (medidas nos prints do site original) ===== */
+:root{
+  --vermelho:#c9171b;
+  --malva:#a28982;       /* títulos */
+  --malva-hero:#af9993;
+  --marrom:#57413b;
+  --texto:#989898;
+  --bege:#e8e1db;        /* fundo das páginas */
+  --bege-rodape:#e5ded4;
+  --cinza-hero:#e7e6e3;
+  --branco:#fff;
+  --f-titulo:'Ledger','Merriweather',Georgia,serif;
+  --f-texto:'Merriweather',Georgia,serif;
+  --f-sans:'Red Hat Display','Quicksand',Arial,sans-serif;
+  --f-menu:'Quicksand',Arial,sans-serif;
+  --largura:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-texto);color:var(--texto);background:var(--bege);line-height:1.6;font-size:15px;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--vermelho);color:#fff;padding:8px 14px;z-index:999}
+.skip:focus{left:8px}
+.container{max-width:var(--largura);margin:0 auto;padding:0 20px}
+.aviso{background:#fff3cd;color:#6b5300;font-size:.8rem;text-align:center;padding:6px 16px;font-family:Arial,sans-serif}
+
+/* Cabeçalho: logo à esquerda, menu numa pílula branca encostada na direita */
+.header{position:sticky;top:0;z-index:50;transition:.25s}
+.header .barra{display:flex;align-items:center;justify-content:space-between;height:90px;padding-left:max(20px,calc((100vw - var(--largura))/2 + 20px))}
+.logo img{height:46px;width:auto}
+.nav{background:#f4f4f4;border-radius:40px 0 0 40px;padding:12px max(30px,calc((100vw - var(--largura))/2 + 40px)) 12px 50px}
+.nav ul{display:flex;gap:32px;list-style:none}
+.nav a{font-family:var(--f-menu);font-size:.95rem;color:#8a8a8a;font-weight:500;transition:.2s}
+.nav a:hover,.nav a.ativo{color:var(--vermelho)}
+.menu-btn{display:none;background:none;border:0;font-size:1.8rem;color:var(--vermelho);cursor:pointer;margin-right:20px}
+.header.rolado{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.header.rolado .barra{height:66px}.header.rolado .nav{background:transparent}
+
+/* Títulos e textos */
+.titulo{font-family:var(--f-titulo);color:var(--malva);font-weight:400;font-size:1.9rem;margin-bottom:6px}
+.texto p{font-size:.85rem;text-align:justify;margin-bottom:26px;max-width:520px}
+.btn{display:inline-block;font-family:var(--f-texto);background:var(--vermelho);color:#fff;padding:10px 42px;border-radius:40px;font-size:.85rem;font-weight:700;border:2px solid var(--vermelho);transition:.2s}
+.btn:hover{background:transparent;color:var(--vermelho)}
+.btn.branco{background:#fff;color:var(--vermelho);border-color:#fff}
+.btn.branco:hover{background:transparent;color:#fff}
+
+/* Fotos redondas */
+.circulo{border-radius:50%;overflow:hidden;aspect-ratio:1;background:#ddd}
+.circulo img{width:100%;height:100%;object-fit:cover}
+
+/* Ondas entre seções */
+.onda{display:block;width:100%;height:110px}
+
+/* HERO (Home) */
+.hero{position:relative;background:linear-gradient(180deg,var(--cinza-hero),#dedcd8);margin-top:-90px;padding-top:90px;overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:560px;position:relative}
+.hero h1{font-family:var(--f-sans);font-weight:800;color:var(--malva-hero);font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;text-transform:uppercase}
+.hero h1 small{display:block;text-transform:none;color:var(--marrom);font-weight:500;font-size:.62em;margin-top:8px;line-height:1.1}
+.hero .fotos{position:relative;justify-self:end;width:min(440px,90%)}
+.hero .fotos .circulo:nth-child(2){position:absolute;width:42%;left:-12%;bottom:-8%;border:4px solid var(--cinza-hero)}
+.seta{position:absolute;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--malva);font-size:2.4rem;cursor:pointer;z-index:2;padding:10px}
+.seta.esq{left:max(10px,calc((100vw - var(--largura))/2 - 60px))}.seta.dir{right:max(10px,calc((100vw - var(--largura))/2 - 60px))}
+.hero .slide{display:none}.hero .slide.ativo{display:grid}
+.hero-onda{position:relative;margin-top:-110px;z-index:1}
+
+/* Blocos foto + texto */
+.bloco{padding:60px 0 120px}
+.bloco .container{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.bloco .circulo{width:min(330px,100%);margin:0 auto}
+.bloco.inverte .midia{order:2}
+
+/* Faixa vermelha do Teleatendimento */
+.faixa-branca{background:#fff;padding:36px 0}
+.tele{background:var(--vermelho) url("img/padrao-faixa.svg") right center/auto 100% no-repeat;color:#fff;border-radius:4px;padding:34px 70px}
+.tele .titulo{color:#fff;font-size:1.25rem}
+.tele p{font-size:.8rem;font-weight:700;margin-bottom:22px;max-width:320px}
+
+/* Fundo com forma decorativa (substituir pela forma da marca, se for o caso) */
+.decor{background-image:url("img/fundo-decor.svg");background-repeat:no-repeat;background-size:520px;background-position:left -80px center}
+.decor-dir{background-image:url("img/fundo-decor.svg");background-repeat:no-repeat;background-size:600px;background-position:right -150px top 40px}
+
+/* Topo das páginas internas */
+.cabeca-pagina{padding:70px 0 40px}
+.cabeca-pagina p{font-size:.95rem}
+
+/* Serviços: cards com foto e faixa translúcida */
+.cards-foto{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card-foto{position:relative;display:block;border-radius:4px;overflow:hidden;aspect-ratio:1.17}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card-foto:hover img{transform:scale(1.05)}
+.card-foto .rotulo{position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,.35);backdrop-filter:blur(2px);color:#fff;font-family:var(--f-sans);font-weight:700;font-size:1.05rem;padding:20px 30px;display:flex;justify-content:space-between;align-items:center;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+.card-foto .rotulo i{width:13px;height:13px;border:2px solid #fff}
+.metade-bege{background:linear-gradient(var(--bege) 0 50%,#fff 50%)}
+.paginacao{display:flex;gap:10px;justify-content:center;padding:40px 0 50px;background:#fff}
+.paginacao a{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;color:#222;font-family:var(--f-sans);font-weight:700}
+.paginacao a.ativo{background:var(--malva);color:#fff}
+
+/* O Espaço */
+.branco{background:#fff}
+.mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 0 40px}
+.mvv .cartao{background:linear-gradient(160deg,var(--bege-rodape),#f1ece6);padding:38px 32px 50px;min-height:210px}
+.mvv h3{font-family:var(--f-titulo);color:var(--malva);font-weight:400;font-size:1.1rem}
+.mvv p,.mvv li{font-size:.75rem;text-align:justify;list-style:none}
+.carrossel{position:relative}
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}
+.galeria img{aspect-ratio:.88;object-fit:cover;width:100%;border-radius:2px}
+.carrossel .seta{color:#bbb;font-size:1.6rem}
+.carrossel .seta.esq{left:-50px}.carrossel .seta.dir{right:-50px}
+.equipe .container{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:30px 20px 80px}
+.equipe .circulo{width:min(300px,100%);margin:0 auto}
+.equipe .topo-eq{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.equipe .setas button{background:none;border:0;font-size:1.3rem;color:var(--vermelho);cursor:pointer;padding:0 6px}
+.equipe .setas button:first-child{color:#ccc}
+.equipe h3{font-family:var(--f-sans);color:var(--vermelho);font-weight:800;font-size:1.45rem;text-transform:uppercase;margin-bottom:14px}
+.equipe ul{font-size:.78rem;line-height:2;list-style:none}
+.equipe li::before{content:"• "}
+.equipe .papel{font-family:var(--f-sans);font-size:.62rem;color:var(--malva);text-transform:uppercase;font-weight:600;margin-top:10px;display:block}
+.membro{display:none}.membro.ativo{display:grid}
+
+/* Cursos / Contato */
+.form{display:grid;gap:14px;max-width:560px}
+.form input,.form textarea{width:100%;padding:14px 16px;border:1px solid #ddd;border-radius:10px;font:inherit;background:#fff}
+.mapa{width:100%;height:320px;border-radius:6px;background:var(--bege-rodape);display:grid;place-items:center;color:var(--malva)}
+
+/* Rodapé */
+.rodape-eb{background:var(--bege-rodape);padding:60px 0 50px;font-size:.85rem;line-height:2;color:#7d7d7d}
+.rodape-eb .container{display:grid;grid-template-columns:1.3fr 1fr .9fr;gap:40px}
+.rodape-eb h4{font-family:var(--f-texto);color:var(--vermelho);font-size:1rem;margin:52px 0 8px}
+.rodape-eb .logo{display:block;margin-bottom:40px}
+.rodape-eb ul{list-style:none}
+.rodape-eb li{display:flex;align-items:center;gap:10px}
+.rodape-eb .ic{width:20px;height:20px;border-radius:50%;background:var(--vermelho);display:grid;place-items:center;flex:none}
+.rodape-eb .ic svg{width:11px;height:11px;fill:#fff}
+.insta{margin-top:40px;width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.insta svg{width:16px;height:16px;fill:#8a8a8a}
+.rodape{background:#fff;color:#9a8d8a;font-size:.8rem;padding:14px 0}
+.topo{position:fixed;right:22px;bottom:96px;width:30px;height:30px;border-radius:50%;background:var(--vermelho);color:#fff;display:grid;place-items:center;font-size:.75rem;z-index:60}
+.whats{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:60}
+.whats svg{width:28px;height:28px;fill:#fff}
+
+/* Celular */
+@media (max-width:900px){
+  .menu-btn{display:block}
+  .nav{position:absolute;top:100%;left:0;right:0;border-radius:0;padding:0;background:#fff;display:none;box-shadow:0 10px 20px rgba(0,0,0,.08)}
+  .nav.aberto{display:block}
+  .nav ul{flex-direction:column;gap:0;padding:6px 20px}
+  .nav li{border-bottom:1px solid #eee}.nav a{display:block;padding:12px 0}
+  .hero .container,.bloco .container,.equipe .container{grid-template-columns:1fr;gap:40px;text-align:left}
+  .hero .container{padding-top:30px;padding-bottom:80px}
+  .hero .fotos{justify-self:center;width:80%}
+  .bloco.inverte .midia{order:0}
+  .cards-foto,.mvv,.rodape-eb .container{grid-template-columns:1fr}
+  .galeria{grid-template-columns:1fr 1fr}
+  .carrossel .seta{display:none}
+  .tele{padding:30px 26px}
+  .rodape-eb h4{margin-top:10px}
+}
+.equipe .membro{display:none}.equipe .membro.ativo{display:grid}
