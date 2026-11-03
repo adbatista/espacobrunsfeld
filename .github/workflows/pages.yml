@@ -1,8 +1,8 @@
 name: Publicar no GitHub Pages
 
+# Desligado por enquanto: o GitHub Pages grátis exige repositório público.
+# Se o repositório virar público, volte a incluir "push: branches: [main]" abaixo.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
