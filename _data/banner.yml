@@ -1,9 +1,4 @@
-# Slides do banner da Home
-- titulo: "[Nome<br>do Espaço]"
-  slogan: "[Slogan do banner 1]"
-  foto_grande: hero-1.svg
-  foto_pequena: hero-2.svg
-- titulo: "[Nome<br>do Espaço]"
-  slogan: "[Slogan do banner 2]"
-  foto_grande: hero-1.svg
-  foto_pequena: hero-2.svg
+# Banners da Home (a imagem já contém o título). Para mais de um, adicione outro item.
+- desktop: banner-desktop.jpg
+  celular: banner-celular.jpg
+  alt: "Espaço Brunsfeld – Excelência em Saúde"

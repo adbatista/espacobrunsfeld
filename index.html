@@ -3,22 +3,21 @@ layout: default
 title: Home
 ---
 <section class="hero">
-  {%- for s in site.data.banner %}
-  <div class="container slide{% if forloop.first %} ativo{% endif %}">
-    <h1>{{ s.titulo }}<small>{{ s.slogan }}</small></h1>
-    <div class="fotos">
-      <div class="circulo"><img src="{{ '/assets/img/' | append: s.foto_grande | relative_url }}" alt="[Foto principal]"></div>
-      <div class="circulo"><img src="{{ '/assets/img/' | append: s.foto_pequena | relative_url }}" alt="[Foto secundária]"></div>
-    </div>
-  </div>
+  {%- for b in site.data.banner %}
+  <picture class="slide{% if forloop.first %} ativo{% endif %}">
+    <source media="(max-width: 700px)" srcset="{{ '/assets/img/' | append: b.celular | relative_url }}">
+    <img src="{{ '/assets/img/' | append: b.desktop | relative_url }}" alt="{{ b.alt }}">
+  </picture>
   {%- endfor %}
+  {%- if site.data.banner.size > 1 %}
   <button class="seta esq" aria-label="Anterior" onclick="passaHero(-1)">&#8249;</button>
   <button class="seta dir" aria-label="Próximo" onclick="passaHero(1)">&#8250;</button>
+  {%- endif %}
 </section>
 <div class="hero-onda">{% include onda.html cima="transparent" baixo="var(--bege)" forma=3 %}</div>
 
-{% include bloco.html foto="foto-espaco.svg" titulo="O Espaço" texto="[SUBSTITUIR: parágrafo sobre a história, a fundadora e a filosofia do Espaço.]" botao="Saiba Mais" link="/sobre.html" %}
-{% include bloco.html foto="foto-servicos.svg" titulo="Serviços" texto="[SUBSTITUIR: parágrafo sobre a avaliação inicial completa e o método de atendimento.]" botao="Conhecer" link="/servicos.html" inverte=true %}
+{% include bloco.html foto="espaco-recepcao.jpg" titulo="O Espaço" texto="[SUBSTITUIR: parágrafo sobre a história, a fundadora e a filosofia do Espaço.]" botao="Saiba Mais" link="/sobre.html" %}
+{% include bloco.html foto="home-servicos.jpg" titulo="Serviços" texto="[SUBSTITUIR: parágrafo sobre a avaliação inicial completa e o método de atendimento.]" botao="Conhecer" link="/servicos.html" inverte=true %}
 
 <div class="faixa-branca"><div class="container"><div class="tele">
   <h2 class="titulo">Teleatendimento</h2>
@@ -27,4 +26,4 @@ title: Home
 </div></div></div>
 {% include onda.html cima="#fff" baixo="var(--bege)" forma=2 %}
 
-{% include bloco.html foto="foto-cursos.svg" titulo="Cursos" texto="[SUBSTITUIR: chamada sobre os cursos.]" botao="Conhecer" link="/cursos.html" classe="decor" %}
+{% include bloco.html foto="home-cursos.jpg" titulo="Cursos" texto="[SUBSTITUIR: chamada sobre os cursos.]" botao="Conhecer" link="/cursos.html" classe="decor" %}

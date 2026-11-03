@@ -1,6 +1,6 @@
 # Equipe (página O Espaço). Uma entrada por profissional.
 - nome: "[Nome do profissional 1]"
-  foto: pessoa.svg
+  foto: equipe-1.jpg
   especialidade: "[Especialidade]"
   formacao:
     - "[Formação e ano]"
@@ -8,7 +8,7 @@
     - "[Especialização]"
     - "[Experiência]"
 - nome: "[Nome do profissional 2]"
-  foto: pessoa.svg
+  foto: equipe-2.jpg
   especialidade: "[Especialidade]"
   formacao:
     - "[Formação e ano]"
@@ -16,7 +16,7 @@
     - "[Especialização]"
     - "[Experiência]"
 - nome: "[Nome do profissional 3]"
-  foto: pessoa.svg
+  foto: equipe-3.jpg
   especialidade: "[Especialidade]"
   formacao:
     - "[Formação e ano]"
@@ -24,7 +24,7 @@
     - "[Especialização]"
     - "[Experiência]"
 - nome: "[Nome do profissional 4]"
-  foto: pessoa.svg
+  foto: equipe-4.jpg
   especialidade: "[Especialidade]"
   formacao:
     - "[Formação e ano]"
@@ -32,7 +32,7 @@
     - "[Especialização]"
     - "[Experiência]"
 - nome: "[Nome do profissional 5]"
-  foto: pessoa.svg
+  foto: equipe-5.jpg
   especialidade: "[Especialidade]"
   formacao:
     - "[Formação e ano]"
@@ -40,7 +40,7 @@
     - "[Especialização]"
     - "[Experiência]"
 - nome: "[Nome do profissional 6]"
-  foto: pessoa.svg
+  foto: equipe-6.jpg
   especialidade: "[Especialidade]"
   formacao:
     - "[Formação e ano]"
