@@ -2,14 +2,14 @@
 layout: default
 title: Contato
 ---
-{% include cabeca-pagina.html titulo="Contato" subtitulo="[SUBSTITUIR: frase de convite]" %}
-<section class="bloco" style="padding-top:20px"><div class="container">
-  <form class="form" onsubmit="event.preventDefault();alert('Formulário de exemplo: conecte a um serviço de envio (ex.: Formspree) ou ao WhatsApp.');">
-    <input placeholder="Nome" required>
-    <input type="email" placeholder="E-mail" required>
-    <input placeholder="Telefone / WhatsApp">
-    <textarea rows="5" placeholder="Mensagem"></textarea>
-    <button class="btn" type="submit">Enviar</button>
-  </form>
-  <div class="mapa">[Mapa do Google: colar aqui o &lt;iframe&gt; do endereço]</div>
+{% assign c = site.data.contato %}
+<div class="pg-contato">{% include form-contato.html com_contato=true %}</div>
+{% include onda.html cima="var(--bege)" baixo="#fff" forma=2 %}
+<section class="mapa-sec branco"><div class="container">
+  <a class="skip-mapa" href="#endereco">Pular mapa</a>
+  {% if c.mapa_embed != "" %}<iframe class="mapa" src="{{ c.mapa_embed }}" loading="lazy" title="Mapa"></iframe>{% else %}<div class="mapa">[Mapa: cole o endereço de incorporação do Google Maps em _data/contato.yml]</div>{% endif %}
+  <div class="mapa-rodape" id="endereco">
+    <div><h3>Endereço</h3><p>{{ c.endereco | join: "<br>" }}</p></div>
+    <div class="mapa-botoes"><a class="btn" href="{{ c.link_waze }}">Ver no Waze</a><a class="btn" href="{{ c.link_maps }}">Ver no Maps</a></div>
+  </div>
 </div></section>

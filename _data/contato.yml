@@ -4,8 +4,13 @@ whatsapp: "[(00) 0 0000-0000]"
 whatsapp_link: "#"        # ex.: https://api.whatsapp.com/send?phone=55DDDNUMERO
 telefone: "[(00) 0000-0000]"
 email: "[email@dominio.com]"
+atendimento: "[Atendimento com hora marcada]"
 instagram: "#"            # link do perfil
 endereco:
   - "[Rua, número - Bairro,]"
   - "[Cidade - UF, CEP]"
 credito: "[Crédito]"
+# Mapa (página Contato): cole o endereço de "Incorporar um mapa" do Google Maps em mapa_embed
+mapa_embed: ""
+link_maps: "#"
+link_waze: "#"

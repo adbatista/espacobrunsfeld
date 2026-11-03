@@ -3,9 +3,30 @@ layout: default
 title: Serviços
 ---
 {% include cabeca-pagina.html titulo="Serviços" subtitulo="[SUBSTITUIR: frase de apoio da página de serviços]" %}
-<div class="metade-bege"><div class="container"><div class="cards-foto">
-  {%- for s in site.data.servicos %}
-  <a class="card-foto" href="#"><img src="{{ '/assets/img/' | append: s.foto | relative_url }}" alt="{{ s.nome }}"><span class="rotulo">{{ s.nome }}<i></i></span></a>
+{% assign lista = site.servicos | sort: "ordem" %}
+<div class="metade-bege"><div class="container"><div class="cards-foto" id="cards-servicos">
+  {%- for s in lista %}
+  <a class="card-foto" href="{{ s.url | relative_url }}" title="Ver serviço" data-pagina="{{ forloop.index0 | divided_by: site.servicos_por_pagina | plus: 1 }}"><img src="{{ '/assets/img/' | append: s.foto | relative_url }}" alt="{{ s.title }}"><span class="rotulo">{{ s.title }}<i></i></span></a>
   {%- endfor %}
 </div></div></div>
-<nav class="paginacao" aria-label="Páginas"><a class="ativo" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">&#8250;</a></nav>
+{% assign total = lista.size | plus: site.servicos_por_pagina | minus: 1 | divided_by: site.servicos_por_pagina %}
+<nav class="paginacao" aria-label="Páginas" data-total="{{ total }}">
+  <a href="#" data-ir="-1" aria-label="Anterior">&#8249;</a>
+  {%- for n in (1..total) %}<a href="?pagina={{ n }}" data-pagina="{{ n }}">{{ n }}</a>{% endfor %}
+  <a href="#" data-ir="1" aria-label="Próxima">&#8250;</a>
+</nav>
+<script>
+(function(){
+  const nav=document.querySelector('.paginacao'),total=+nav.dataset.total;
+  let atual=Math.min(Math.max(+new URLSearchParams(location.search).get('pagina')||1,1),total);
+  function mostra(p){atual=p;
+    document.querySelectorAll('#cards-servicos .card-foto').forEach(c=>c.hidden=+c.dataset.pagina!==p);
+    nav.querySelectorAll('[data-pagina]').forEach(a=>a.classList.toggle('ativo',+a.dataset.pagina===p));
+    nav.querySelector('[data-ir="-1"]').style.visibility=p>1?'':'hidden';
+    nav.querySelector('[data-ir="1"]').style.visibility=p<total?'':'hidden';
+    history.replaceState(null,'',p>1?'?pagina='+p:location.pathname);}
+  nav.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();
+    mostra(a.dataset.ir?Math.min(Math.max(atual+ +a.dataset.ir,1),total):+a.dataset.pagina);});
+  mostra(atual);
+})();
+</script>

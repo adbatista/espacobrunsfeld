@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="cabeca-pagina decor-dir"><div class="container">
+  <a class="voltar" href="{{ '/servicos.html' | relative_url }}">&#8249; Serviços</a>
+  <h1 class="titulo">{{ page.title }}</h1><p>{{ page.resumo }}</p>
+</div></div>
+<section class="servico-det"><div class="container">
+  <div class="foto"><img src="{{ '/assets/img/' | append: page.foto | relative_url }}" alt="{{ page.title }}"></div>
+  <div class="texto">{{ content }}<a class="btn" href="#envie">Agendar</a></div>
+</div></section>
+<div id="envie">{% include form-contato.html %}</div>
