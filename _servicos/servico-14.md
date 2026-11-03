@@ -1,7 +1,7 @@
 ---
 title: "[Serviço 14]"
 ordem: 14
-foto: servico.svg
+foto: servico-14.jpg
 resumo: "[SUBSTITUIR: uma frase sobre o serviço 14]"
 ---
 [SUBSTITUIR: descrição do serviço 14. Explique para quem é, como funciona a sessão e quais benefícios o paciente pode esperar.]

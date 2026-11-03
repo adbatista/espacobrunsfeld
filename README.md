@@ -15,7 +15,7 @@ O site gerado fica em `_site/`.
 | Cabeçalho, rodapé, menu e scripts (comuns a todas as páginas) | `_layouts/default.html` |
 | Itens do menu | `_data/nav.yml` |
 | Telefone, WhatsApp, e-mail, Instagram, endereço | `_data/contato.yml` |
-| Slides do banner da Home | `_data/banner.yml` |
+| Banner da Home (imagem para computador e para celular) | `_data/banner.yml` |
 | Serviços (um arquivo por serviço: vira card e página própria em `/servico/<nome>/`) | `_servicos/*.md` |
 | Quantos serviços por página na listagem | `servicos_por_pagina` em `_config.yml` |
 | Formulário "Envie uma Mensagem" (Contato e páginas de serviço) | `_includes/form-contato.html` |
@@ -28,7 +28,7 @@ O site gerado fica em `_site/`.
 | Peças reutilizáveis (onda, bloco foto+texto, ícones) | `_includes/` |
 
 ## Conteúdo a substituir
-Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. Todo texto entre `[colchetes]`, o logo (`assets/img/logo.svg`) e as fotos em `assets/img/` são espaços reservados. Quando o conteúdo real estiver no lugar, mude `aviso_modelo: false` em `_config.yml` para remover a faixa amarela.
+Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. As fotos, o logo e os ícones em `assets/img/` vieram do site original. Todo texto entre `[colchetes]` ainda é espaço reservado. Quando o conteúdo real estiver no lugar, mude `aviso_modelo: false` em `_config.yml` para remover a faixa amarela.
 
 ## Publicação (GitHub Pages)
 O workflow `.github/workflows/pages.yml` gera o site com Jekyll a cada push na `main` e publica o resultado na branch `gh-pages`. Também dá para rodar manualmente em *Actions*.
