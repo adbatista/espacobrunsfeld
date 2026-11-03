@@ -30,10 +30,14 @@ O site gerado fica em `_site/`.
 ## Conteúdo a substituir
 Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. Todo texto entre `[colchetes]`, o logo (`assets/img/logo.svg`) e as fotos em `assets/img/` são espaços reservados. Quando o conteúdo real estiver no lugar, mude `aviso_modelo: false` em `_config.yml` para remover a faixa amarela.
 
-## Publicação
+## Publicação (GitHub Pages)
+O workflow `.github/workflows/pages.yml` gera o site com Jekyll e publica no GitHub Pages a cada push na `main` (também dá para rodar manualmente em *Actions*).
 
-**Netlify (recomendado com repositório privado):** crie uma conta grátis em netlify.com, clique em *Add new site → Import an existing project*, escolha este repositório e confirme. O `netlify.toml` já tem o comando de build. Cada merge na `main` publica sozinho.
+Para ativar, uma vez só:
+1. O GitHub Pages só publica repositório **público**, a não ser no plano pago (GitHub Pro). Se o repositório for privado, mude em **Settings → General → Danger Zone → Change visibility**, ou assine o Pro.
+2. Em **Settings → Pages → Build and deployment → Source**, escolha **GitHub Actions**.
+3. Em *Actions*, rode de novo o workflow "Publicar no GitHub Pages".
 
-**GitHub Pages:** só funciona de graça com repositório público. O workflow `.github/workflows/pages.yml` gera e publica o site no GitHub Pages a cada push na `main`. Para ativar, vá em **Settings → Pages → Source** e escolha **GitHub Actions**. Com domínio próprio, deixe `baseurl: ""` em `_config.yml`.
+O endereço fica `https://adbatista.github.io/espacobrunsfeld/`; o workflow ajusta o `baseurl` sozinho. Para usar domínio próprio, configure em **Settings → Pages → Custom domain**.
 
 Capturas de tela do resultado ficam em `docs/previews/`.
