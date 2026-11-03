@@ -1,0 +1,10 @@
+- titulo: Home
+  url: /
+- titulo: O Espaço
+  url: /sobre.html
+- titulo: Serviços
+  url: /servicos.html
+- titulo: Cursos
+  url: /cursos.html
+- titulo: Contato
+  url: /contato.html

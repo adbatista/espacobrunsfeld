@@ -1,0 +1,49 @@
+# Equipe (página O Espaço). Uma entrada por profissional.
+- nome: "[Nome do profissional 1]"
+  foto: pessoa.svg
+  especialidade: "[Especialidade]"
+  formacao:
+    - "[Formação e ano]"
+    - "[Pós-graduação]"
+    - "[Especialização]"
+    - "[Experiência]"
+- nome: "[Nome do profissional 2]"
+  foto: pessoa.svg
+  especialidade: "[Especialidade]"
+  formacao:
+    - "[Formação e ano]"
+    - "[Pós-graduação]"
+    - "[Especialização]"
+    - "[Experiência]"
+- nome: "[Nome do profissional 3]"
+  foto: pessoa.svg
+  especialidade: "[Especialidade]"
+  formacao:
+    - "[Formação e ano]"
+    - "[Pós-graduação]"
+    - "[Especialização]"
+    - "[Experiência]"
+- nome: "[Nome do profissional 4]"
+  foto: pessoa.svg
+  especialidade: "[Especialidade]"
+  formacao:
+    - "[Formação e ano]"
+    - "[Pós-graduação]"
+    - "[Especialização]"
+    - "[Experiência]"
+- nome: "[Nome do profissional 5]"
+  foto: pessoa.svg
+  especialidade: "[Especialidade]"
+  formacao:
+    - "[Formação e ano]"
+    - "[Pós-graduação]"
+    - "[Especialização]"
+    - "[Experiência]"
+- nome: "[Nome do profissional 6]"
+  foto: pessoa.svg
+  especialidade: "[Especialidade]"
+  formacao:
+    - "[Formação e ano]"
+    - "[Pós-graduação]"
+    - "[Especialização]"
+    - "[Experiência]"

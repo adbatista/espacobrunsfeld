@@ -1,0 +1,3 @@
+{%- comment -%} Onda entre seções. Parâmetros: cima (cor de fundo), baixo (cor da onda), forma (2 ou 3) {%- endcomment -%}
+{%- if include.forma == 3 -%}{%- assign d = "M0,40 C500,120 1000,-20 1440,60 L1440,110 L0,110 Z" -%}{%- else -%}{%- assign d = "M0,110 C400,10 900,10 1440,90 L1440,110 Z" -%}{%- endif -%}
+<svg class="onda" viewBox="0 0 1440 110" preserveAspectRatio="none" style="background:{{ include.cima }}" aria-hidden="true"><path d="{{ d }}" fill="{{ include.baixo }}"/></svg>
