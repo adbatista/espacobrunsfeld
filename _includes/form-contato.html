@@ -1,0 +1,28 @@
+<section class="envie"><div class="container">
+  <div>
+    <h2 class="titulo">Envie uma Mensagem</h2>
+    <p class="intro">[SUBSTITUIR: convite para falar pelas redes sociais ou pelo formulário abaixo.]</p>
+    <p class="obrigatorios">* campos obrigatórios</p>
+    {%- comment -%} Para receber as mensagens por e-mail, troque o action por um serviço como Formspree (https://formspree.io) {%- endcomment %}
+    <form class="form" action="#" method="post" onsubmit="if(this.action.endsWith('#')){event.preventDefault();alert('Formulário de exemplo: configure o envio (ex.: Formspree) em _includes/form-contato.html.');}">
+      <label>Nome *<input name="nome" required></label>
+      <label>E-mail *<input type="email" name="email" required></label>
+      <label>Telefone *<input type="tel" name="telefone" required></label>
+      <label>Mensagem *<textarea name="mensagem" rows="5" required></textarea></label>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </div>
+  {%- if include.com_contato %}
+  {% assign c = site.data.contato %}
+  <aside class="bloco-contato">
+    <h3>Contato</h3>
+    <ul>
+      <li><span class="ic">{% include icone.html nome="whatsapp" %}</span><a href="{{ c.whatsapp_link }}">{{ c.whatsapp }}</a></li>
+      <li><span class="ic">{% include icone.html nome="telefone" %}</span>{{ c.telefone }}</li>
+      <li><span class="ic">{% include icone.html nome="email" %}</span><a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+    </ul>
+    <p class="hora-marcada">{{ c.atendimento }}</p>
+    <a class="insta" href="{{ c.instagram }}" aria-label="Instagram">{% include icone.html nome="instagram" %}</a>
+  </aside>
+  {%- endif %}
+</div></section>

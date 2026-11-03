@@ -8,6 +8,17 @@ baseurl: ""
 url: ""
 # Faixa amarela de aviso de conteúdo provisório. Mude para false quando o conteúdo real estiver no lugar.
 aviso_modelo: true
+# Cada arquivo em _servicos/ vira uma página em /servico/<nome>/ e um card em Serviços
+collections:
+  servicos:
+    output: true
+    permalink: /servico/:name/
+servicos_por_pagina: 6
+defaults:
+  - scope:
+      type: servicos
+    values:
+      layout: servico
 exclude:
   - README.md
   - Gemfile

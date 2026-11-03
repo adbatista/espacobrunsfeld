@@ -18,7 +18,7 @@
     <button class="menu-btn" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('aberto')">&#9776;</button>
     <nav class="nav"><ul>
       {%- for item in site.data.nav %}
-      <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="ativo"{% endif %}>{{ item.titulo }}</a></li>
+      <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url or page.collection == 'servicos' and item.url == '/servicos.html' %} class="ativo"{% endif %}>{{ item.titulo }}</a></li>
       {%- endfor %}
     </ul></nav>
   </div>
