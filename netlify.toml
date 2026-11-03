@@ -1,0 +1,7 @@
+# Publicação no Netlify (grátis, funciona com repositório privado)
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"

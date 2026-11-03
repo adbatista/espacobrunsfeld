@@ -31,6 +31,9 @@ O site gerado fica em `_site/`.
 Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. Todo texto entre `[colchetes]`, o logo (`assets/img/logo.svg`) e as fotos em `assets/img/` são espaços reservados. Quando o conteúdo real estiver no lugar, mude `aviso_modelo: false` em `_config.yml` para remover a faixa amarela.
 
 ## Publicação
-O workflow `.github/workflows/pages.yml` gera e publica o site no GitHub Pages a cada push na `main`. Para ativar, vá em **Settings → Pages → Source** e escolha **GitHub Actions**. Com domínio próprio, deixe `baseurl: ""` em `_config.yml`.
+
+**Netlify (recomendado com repositório privado):** crie uma conta grátis em netlify.com, clique em *Add new site → Import an existing project*, escolha este repositório e confirme. O `netlify.toml` já tem o comando de build. Cada merge na `main` publica sozinho.
+
+**GitHub Pages:** só funciona de graça com repositório público. O workflow `.github/workflows/pages.yml` gera e publica o site no GitHub Pages a cada push na `main`. Para ativar, vá em **Settings → Pages → Source** e escolha **GitHub Actions**. Com domínio próprio, deixe `baseurl: ""` em `_config.yml`.
 
 Capturas de tela do resultado ficam em `docs/previews/`.
