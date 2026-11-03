@@ -31,13 +31,10 @@ O site gerado fica em `_site/`.
 Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. Todo texto entre `[colchetes]`, o logo (`assets/img/logo.svg`) e as fotos em `assets/img/` são espaços reservados. Quando o conteúdo real estiver no lugar, mude `aviso_modelo: false` em `_config.yml` para remover a faixa amarela.
 
 ## Publicação (GitHub Pages)
-O workflow `.github/workflows/pages.yml` gera o site com Jekyll e publica no GitHub Pages a cada push na `main` (também dá para rodar manualmente em *Actions*).
+O workflow `.github/workflows/pages.yml` gera o site com Jekyll a cada push na `main` e publica o resultado na branch `gh-pages`. Também dá para rodar manualmente em *Actions*.
 
-Para ativar, uma vez só:
-1. O GitHub Pages só publica repositório **público**, a não ser no plano pago (GitHub Pro). Se o repositório for privado, mude em **Settings → General → Danger Zone → Change visibility**, ou assine o Pro.
-2. Em **Settings → Pages → Build and deployment → Source**, escolha **GitHub Actions**.
-3. Em *Actions*, rode de novo o workflow "Publicar no GitHub Pages".
+Em **Settings → Pages**, a fonte deve ser **Deploy from a branch**, com a branch **gh-pages** e a pasta **/ (root)**. O GitHub costuma ativar isso sozinho quando a branch `gh-pages` aparece pela primeira vez.
 
-O endereço fica `https://adbatista.github.io/espacobrunsfeld/`; o workflow ajusta o `baseurl` sozinho. Para usar domínio próprio, configure em **Settings → Pages → Custom domain**.
+O endereço fica `https://adbatista.github.io/espacobrunsfeld/`. Para usar domínio próprio, configure em **Settings → Pages → Custom domain** e mude `baseurl` no workflow para `""`.
 
 Capturas de tela do resultado ficam em `docs/previews/`.
