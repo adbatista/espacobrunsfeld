@@ -1,5 +1,5 @@
 {%- comment -%} Bloco com foto redonda + texto. Parâmetros: foto, titulo, texto, botao, link, inverte, classe {%- endcomment -%}
 <section class="bloco{% if include.inverte %} inverte{% endif %} {{ include.classe }}"><div class="container">
-  <div class="midia"><div class="circulo"><img src="{{ '/assets/img/' | append: include.foto | relative_url }}" alt="[descrever a foto]"></div></div>
+  <div class="midia"><div class="circulo"><img src="{{ '/assets/img/' | append: include.foto | relative_url }}" alt="{{ include.titulo }}"></div></div>
   <div class="texto"><h2 class="titulo">{{ include.titulo }}</h2><p>{{ include.texto }}</p><a class="btn" href="{{ include.link | relative_url }}">{{ include.botao }}</a></div>
 </div></section>

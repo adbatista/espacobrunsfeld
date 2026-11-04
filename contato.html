@@ -7,7 +7,7 @@ title: Contato
 {% include onda.html cima="var(--bege)" baixo="#fff" forma=2 %}
 <section class="mapa-sec branco"><div class="container">
   <a class="skip-mapa" href="#endereco">Pular mapa</a>
-  {% if c.mapa_embed != "" %}<iframe class="mapa" src="{{ c.mapa_embed }}" loading="lazy" title="Mapa"></iframe>{% else %}<div class="mapa">[Mapa: cole o endereço de incorporação do Google Maps em _data/contato.yml]</div>{% endif %}
+  {% if c.mapa_embed != "" %}<iframe class="mapa" src="{{ c.mapa_embed }}" loading="lazy" title="Mapa"></iframe>{% else %}<div class="mapa">Mapa indisponível</div>{% endif %}
   <div class="mapa-rodape" id="endereco">
     <div><h3>Endereço</h3><p>{{ c.endereco | join: "<br>" }}</p></div>
     <div class="mapa-botoes"><a class="btn" href="{{ c.link_waze }}">Ver no Waze</a><a class="btn" href="{{ c.link_maps }}">Ver no Maps</a></div>
