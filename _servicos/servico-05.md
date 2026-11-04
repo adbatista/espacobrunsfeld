@@ -1,9 +1,0 @@
----
-title: "[Serviço 5]"
-ordem: 5
-foto: servico-04.jpg
-resumo: "[SUBSTITUIR: uma frase sobre o serviço 5]"
----
-[SUBSTITUIR: descrição do serviço 5. Explique para quem é, como funciona a sessão e quais benefícios o paciente pode esperar.]
-
-[SUBSTITUIR: segundo parágrafo opcional, por exemplo sobre duração, frequência ou indicação.]

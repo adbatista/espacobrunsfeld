@@ -28,7 +28,7 @@ O site gerado fica em `_site/`.
 | Peças reutilizáveis (onda, bloco foto+texto, ícones) | `_includes/` |
 
 ## Conteúdo a substituir
-Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. As fotos, o logo e os ícones em `assets/img/` vieram do site original. Todo texto entre `[colchetes]` ainda é espaço reservado. Quando o conteúdo real estiver no lugar, mude `aviso_modelo: false` em `_config.yml` para remover a faixa amarela.
+Para receber as mensagens do formulário, configure um serviço de envio (ex.: Formspree) no `action` de `_includes/form-contato.html`. As fotos, o logo, os ícones e os textos vieram do site original.
 
 ## Publicação (GitHub Pages)
 O workflow `.github/workflows/pages.yml` gera o site com Jekyll a cada push na `main` e publica o resultado na branch `gh-pages`. Também dá para rodar manualmente em *Actions*.

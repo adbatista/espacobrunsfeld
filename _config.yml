@@ -1,13 +1,13 @@
 # Configurações do site (Jekyll)
-title: "[Nome do Espaço]"
-description: "[SUBSTITUIR: descrição curta para o Google]"
+title: "Espaço Brunsfeld"
+description: "Fisioterapia, osteopatia e pilates clínico em Guarapuava - PR. Atendimento personalizado com base em evidências científicas."
 lang: pt-BR
 # Se publicar em https://usuario.github.io/espacobrunsfeld, deixe baseurl: "/espacobrunsfeld".
 # Com domínio próprio (ex.: espacobrunsfeld.com.br), use baseurl: ""
 baseurl: ""
 url: ""
 # Faixa amarela de aviso de conteúdo provisório. Mude para false quando o conteúdo real estiver no lugar.
-aviso_modelo: true
+aviso_modelo: false
 # Cada arquivo em _servicos/ vira uma página em /servico/<nome>/ e um card em Serviços
 collections:
   servicos:

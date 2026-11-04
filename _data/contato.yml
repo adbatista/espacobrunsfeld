@@ -1,16 +1,16 @@
 # Dados de contato exibidos no rodapé de todas as páginas
-chamada: "[SUBSTITUIR: frase convidando a entrar em contato pelas redes sociais ou meios de contato.]"
-whatsapp: "[(00) 0 0000-0000]"
-whatsapp_link: "#"        # ex.: https://api.whatsapp.com/send?phone=55DDDNUMERO
-telefone: "[(00) 0000-0000]"
-email: "[email@dominio.com]"
-atendimento: "[Atendimento com hora marcada]"
-instagram: "#"            # link do perfil
+chamada: "Entre em contato conosco por meio das nossas redes sociais, ou enviando uma mensagem através dos nossos meios de contato!"
+whatsapp: "(42) 9 9107-6655"
+whatsapp_link: "https://api.whatsapp.com/send?phone=5542991076655"
+telefone: "(42) 3035-6655"
+email: "espacobrunsfeld@gmail.com"
+atendimento: "Atendimento com hora marcada"
+instagram: "https://www.instagram.com/espacobrunsfeld/"
 endereco:
-  - "[Rua, número - Bairro,]"
-  - "[Cidade - UF, CEP]"
-credito: "[Crédito]"
-# Mapa (página Contato): cole o endereço de "Incorporar um mapa" do Google Maps em mapa_embed
-mapa_embed: ""
-link_maps: "#"
-link_waze: "#"
+  - "R. Frei Caneca, 1265 - Santana,"
+  - "Guarapuava - PR, 85070-170"
+credito: "Espaço Brunsfeld"
+# Mapa (página Contato): endereço de incorporação do Google Maps
+mapa_embed: "https://maps.google.com/maps?q=-25.3907512,-51.4547272&z=16&output=embed"
+link_maps: "https://maps.google.com/?q=-25.3907512%2C-51.4547272"
+link_waze: "https://www.waze.com/ul?ll=-25.3907512%2C-51.4547272&navigate=yes"
